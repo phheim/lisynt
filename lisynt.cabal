@@ -1,0 +1,98 @@
+name:                lisynt
+version:             0.0.0.1
+cabal-version:       >=1.10
+build-type:          Simple
+
+library
+
+  ghc-options:
+    -Wall -Wno-name-shadowing
+
+  build-depends:
+      base
+    , containers
+    , sort
+    , syfco
+
+  exposed-modules:
+    LISynt
+    LogicToTG
+    TimerGame
+    TimerGameSafetySolving
+    Writer.BLTL
+
+  other-modules:
+    BLTL
+    Expansion
+    Logic
+    MapFold
+    OpenList
+    PartialOrder
+    PrettyPrint
+    Reader.BLTL
+    Reader.TLSF
+    Remapping
+    TransitionTree
+  
+  hs-source-dirs:
+    src/lib
+
+  default-language:
+    Haskell2010
+
+executable lisynt
+
+  ghc-options:
+    -Wall -Wno-name-shadowing
+
+  main-is:
+    Main.hs
+
+  build-depends:
+      base
+    , lisynt
+    , containers
+
+  hs-source-dirs:
+    src/tools/lisynt
+
+  default-language:
+    Haskell2010
+
+executable lisynt-bench
+
+  ghc-options:
+    -Wall -Wno-name-shadowing
+
+  main-is:
+    Main.hs
+
+  build-depends:
+      base
+    , lisynt
+    , containers
+    , time
+
+  hs-source-dirs:
+    src/tools/lisynt-bench
+
+  default-language:
+    Haskell2010
+
+executable bltl2
+
+  ghc-options:
+    -Wall -Wno-name-shadowing
+
+  main-is:
+    Main.hs
+
+  build-depends:
+      base
+    , lisynt
+
+  hs-source-dirs:
+    src/tools/bltl2
+
+  default-language:
+    Haskell2010

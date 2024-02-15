@@ -1,0 +1,5 @@
+resolver: lts-14.17
+extra-deps:
+    - git: https://github.com/reactive-systems/syfco.git
+      commit: 0f0f6a6fff7960d8a0cbb120587984183fa7fc0e
+
